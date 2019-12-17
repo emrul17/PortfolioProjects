@@ -28,19 +28,18 @@ milesFromMetropolis-This indicates how far the job location from the metropliton
 Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
 
 # Data preprocessing
-I examine the outliers of salary column. 25th quartile is 8.5k and 75th quartileis 220.5k. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. From EDA, It is seen that, Highly paid industries are OIL and FINANCE and lowest paid is Education. Similarly, CEO is paid highest followed by CTO, CFO, Vice_president, Senior, Juior and Janitar. For degree, it is seen that salaries increases according to their level of education. However, Average salary for all majors is almost same. None degrees are paid less than average. 
+I examine the outliers of salary column. 25th quartile is 8.5k and 75th quartileis 220.5k. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. From EDA, It is seen that, Highly paid industries are OIL and FINANCE and lowest paid is Education. Similarly, CEO is paid highest followed by CTO, CFO, Vice_president, Senior, Juior and Janitar. For degree, it is seen that salaries increases according to their level of education. However, Average salary for all majors is almost same. None degrees are paid less than average. salary Increase linearly with yearsExperiences wheras salary decreaes with increase milesFromMetroplis. 
 
-salary Increase linearly with yearsExperiences wheras salary decreaes with increase milesFromMetroplis.
+Categorical data is converted to numerical coloumns using one hot encoding.
 
 # Baseline Model
 Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. Different ML models can be tested to reduce the MSE
 
 # Improved Model
-Based on the exploraory data analysis i chose Four regression models(LinearRegression, RandomForestRegressor, GradientBoostingRegressor, XGBRegressor and compared the score. GradientBoosting gives the best result. MSE for gradientBoosting model is 377.45402752571204
+Based on the exploraory data analysis i chose Four regression models(LinearRegression, RandomForestRegressor, GradientBoostingRegressor, XGBRegressor) and compared the score. GradientBoosting gives the best result. MSE for gradientBoosting model is 377.45402752571204. This result is found for default parameters. By applying parameter tuning method we can find the best parameters. 
 
-# Parameter tuning
+# Parameter tuning and predictions
 GridSearchCV is used to find the best parameters. Best score for the parameters are found to be 'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 250 . Using best parameters final MSE is found to be 356.41210502710135.
-# Predictions
 Final prediction is made based on the best parameters for the chosen model- gradientBoosting
 # Feature Importance
 Feature importance method is used to find the important feature that influences the predictions. Most important features are identified as jobtype, yearsExperience and milefrommetropolices.
