@@ -1,7 +1,7 @@
 # Salary Prediction Based on Job Description
 # Problem
 
-The goal of this project is to examine a set of job postings with salaries predict the salary from job description.
+The goal of this project is to examine a set of job postings with salaries and predict the salary from job new job posting.
 # File Guide
 SalaryPredictionDEA.ipynb- This notebook describes obtaining data, EDA and data preprocessing.
 
