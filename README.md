@@ -7,7 +7,20 @@ SalaryPredictionDEA.ipynb- This notebook describes obtaining data, EDA and data 
 
 SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, parameter tuning and predictions.
 # Basic data description and EDA
-Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
+Train dataset has total of 1000000 rows and 8 columns. Following are the deatails of data:
+
+jobId-jobId is the unique id for each job posting
+companyId- There are total of 63 unique company id, representing each company
+jobType-jobType column represents individual job type. Such as ECO, manager, Vice_precident, CFO etc.
+degree-degree column refers to 5 different types of degree employee has. They are doctoral, masters, bachelor, High school and None.
+major-major represents what majors they have in school. For example, Physics, chemistry, engineering etc.
+industry -industry column talks about different types of industries like Web, financical service, health, education, service, oil and auto.
+yearsExperience- This difines how many years of experiences employee has
+milesFromMetropolis-This indicates how far the job location from the metropliton area.
+
+
+
+Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
 
 # Data preprocessing
 There are outliers. I examine the outliers. 25th quartile is 8.5 and 75th quartileis 220.5. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
