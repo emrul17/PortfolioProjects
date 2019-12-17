@@ -10,7 +10,7 @@ SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, para
 Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. 
 
 # Data preprocessing
-There are outliers. I examine the outliers. 25th quartile is 8.5 and 75th quartile. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
+There are outliers. I examine the outliers. 25th quartile is 8.5 and 75th quartileis 220.5. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
 
 # Baseline Model
 Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. So I chose four regression model and they give better result.
