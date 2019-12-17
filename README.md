@@ -7,7 +7,7 @@ SalaryPredictionDEA.ipynb- This notebook describes obtaining data, EDA and data 
 
 SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, parameter tuning and predictions.
 # Basic data description and EDA
-Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. 
+Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
 
 # Data preprocessing
 There are outliers. I examine the outliers. 25th quartile is 8.5 and 75th quartileis 220.5. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
