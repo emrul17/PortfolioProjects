@@ -28,8 +28,7 @@ milesFromMetropolis-This indicates how far the job location from the metropliton
 Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
 
 # Data preprocessing
-I examine the outliers of salary column. 25th quartile is 8.5k and 75th quartileis 220.5k. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
-
+I examine the outliers of salary column. 25th quartile is 8.5k and 75th quartileis 220.5k. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. From EDA, It is seen that, Highly paids industries are OIL and FINANCE and lowest paid is Education. Similarly, CEO is paid highest followed by CTO, CFO, Vice_president, Senior, Juior and Janitar. For degree, it is seen that salaries increases according to their level of education. Average salary for all majors is almost same. 
 # Baseline Model
 Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. So I chose four regression model and they give better result.
 
