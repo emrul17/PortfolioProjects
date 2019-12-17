@@ -3,6 +3,7 @@
 The goal of this project is to predict the salary from job description.
 # File Guide
 SalaryPredictionDEA.ipynb- This notebook describes obtaining data, EDA and data preprocessing.
+
 SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, parameter tuning and predictions.
 # Basic data description and EDA
 Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns() and two are numerical columns. There are no missing and duplicate values in the dataset. 
