@@ -17,9 +17,9 @@ jobType-jobType column represents individual job type. Such as ECO, manager, Vic
 
 degree-degree column refers to 5 different types of degree employee has. They are doctoral, masters, bachelor, High school and None.
 
-major-major represents what majors they have in school. For example, Physics, chemistry, engineering etc.
+major-This represents what major they have. For example, Physics, chemistry, biology, engineering, business etc.
 
-industry -industry column talks about different types of industries like Web, financical service, health, education, service, oil and auto.
+industry -industry column represents about different types of industries like Web, financical service, health, education, service, oil and auto.
 
 yearsExperience- This difines how many years of experiences employee has
 
