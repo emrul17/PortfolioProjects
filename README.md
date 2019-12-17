@@ -6,19 +6,19 @@ SalaryPredictionDEA.ipynb- This notebook describes obtaining data, EDA and data 
 
 SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, parameter tuning and predictions.
 # Basic data description and EDA
-Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns() and two are numerical columns. There are no missing and duplicate values in the dataset. 
+Train dataset has total of 1000000 rows and 8 columns. Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. 
 
 # Data preprocessing
-There are outliers. We examine the outliers and remove the suspecious outliers. For example, salary less than first quartile clearly indicates they are outliers. Whereas, salaries above third quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
+There are outliers. I examine the outliers. 25th quartile is 8.5 and 75th quartile. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. Finally, categorical data are converted with One hot encoding.
 
 # Baseline Model
-Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. 
+Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. So I chose four regression model and they give better result.
 
 # Improved Model
-Four ML models are fitted to improve the MSE score and GradientBoosting gives the best result. MSE for gradientBoosting model is 377.45402752571204
+Based on the exploraory data analysis i chose Four regression model and GradientBoosting gives the best result. MSE for gradientBoosting model is 377.45402752571204
 
 # Parameter tuning
-GridSearchCV is used to find the best parameters. Best score for the parameters are found to be … Using best parameters final MSE is found to be…
+GridSearchCV is used to find the best parameters. Best score for the parameters are found to be…  Using best parameters final MSE is found to be…
 # Predictions
 Final prediction is made based on the best parameters for the chosen model- gradientBoosting
 # Feature Importance
