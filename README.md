@@ -18,9 +18,9 @@ Baseline model is built based on the average salary for industry column and mean
 Based on the exploraory data analysis i chose Four regression model and GradientBoosting gives the best result. MSE for gradientBoosting model is 377.45402752571204
 
 # Parameter tuning
-GridSearchCV is used to find the best parameters. Best score for the parameters are found to be…  Using best parameters final MSE is found to be…
+GridSearchCV is used to find the best parameters. Best score for the parameters are found to be 'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 250 . Using best parameters final MSE is found to be 356.41210502710135.
 # Predictions
 Final prediction is made based on the best parameters for the chosen model- gradientBoosting
 # Feature Importance
-Feature importance method is used to find the important feature that influences the predictions. Most important features are identified as jobtype, yearsExperience and milefrommetropolices
+Feature importance method is used to find the important feature that influences the predictions. Most important features are identified as jobtype, yearsExperience and milefrommetropolices.
 
