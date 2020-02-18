@@ -23,11 +23,21 @@ SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, para
 # Data preprocessing
 
 As a part of data cleaning I have impelemented following steps:
+
 Missing value handling: Luckily there is no missing values.
+
 Outliers: From the box plot, it is clear that salary below 8.5K is an outliers. So I removed this data point. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. From EDA, It is seen that, Highly paid industries are OIL and FINANCE and lowest paid is Education. Similarly, CEO is paid highest followed by CTO, CFO, Vice_president, Senior, Juior and Janitar. For degree, it is seen that salaries increases according to their level of education. However, Average salary for all majors is almost same. None degrees are paid less than average. salary Increase linearly with yearsExperiences wheras salary decreaes with increase milesFromMetroplis. 
+![Salary](https://user-images.githubusercontent.com/33338872/74778437-30aa6480-5261-11ea-9076-887f5c77b012.jpg)
+
 
 # Exploratory Data Analysis
 Looking at the Box plot, average salary for higher educated people are higher compared to those who have low degree. Similary C-level positions are paid higher salary. However, average salary for all majors are pretty much same. For industry, Oil and finance are highly paid industry whereas eaducation is low paying industry. 
+![jobType](https://user-images.githubusercontent.com/33338872/74778477-491a7f00-5261-11ea-9936-848ada21bbab.jpg)
+![degree](https://user-images.githubusercontent.com/33338872/74778499-55064100-5261-11ea-83fc-70059be92881.jpg)
+![major](https://user-images.githubusercontent.com/33338872/74778511-5899c800-5261-11ea-9f0b-3e31859a86f0.jpg)
+![cat_plot](https://user-images.githubusercontent.com/33338872/74778518-5a638b80-5261-11ea-8d29-9a42a6ab0820.jpg)
+
+
 
 # Baseline Model
 Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. Different ML models can be tested to reduce the MSE
