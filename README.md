@@ -1,35 +1,33 @@
 # Salary Prediction Based on Job Description
 # Problem
 
-The goal of this project is to examine a set of job postings with salaries and predict the salary from new job posting.
+Offering an appropriate salary is aspect of job posting for employeers. Beause decent salary offer can bring the best talent to the team. It is always difficult to predict the right salary for a particular position. The goal of this project is to examine a set of job postings with salaries and predict the salary from new job posting.
+
+# Data collection 
+Train dataset has total of 1000000 rows and 8 columns. Following are the deatails of data:
+jobId-jobId is the unique id for each job posting.
+companyId- There are total of 63 unique company id, representing each company.
+jobType-jobType column represents individual job type. Such as ECO, manager, Vice_precident, CFO etc.
+degree-degree column refers to 5 different types of degree employee has. They are doctoral, masters, bachelor, High school and None.
+major-This represents what major they have. For example, Physics, chemistry, biology, engineering, business etc.
+industry -industry column represents about different types of industries like Web, financical service, health, education, service, oil and auto.
+yearsExperience- This difines how many years of experiences employee has
+milesFromMetropolis-This indicates how far the job location from the metropliton area.
+Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
+
 # File Guide
 SalaryPredictionDEA.ipynb- This notebook describes obtaining data, EDA and data preprocessing.
 
 SalaryPrediction.ipynb-This notebook contains data preprocessing, modeling, parameter tuning and predictions.
-# Basic data description and EDA
-Train dataset has total of 1000000 rows and 8 columns. Following are the deatails of data:
-
-jobId-jobId is the unique id for each job posting.
-
-companyId- There are total of 63 unique company id, representing each company.
-
-jobType-jobType column represents individual job type. Such as ECO, manager, Vice_precident, CFO etc.
-
-degree-degree column refers to 5 different types of degree employee has. They are doctoral, masters, bachelor, High school and None.
-
-major-This represents what major they have. For example, Physics, chemistry, biology, engineering, business etc.
-
-industry -industry column represents about different types of industries like Web, financical service, health, education, service, oil and auto.
-
-yearsExperience- This difines how many years of experiences employee has
-
-milesFromMetropolis-This indicates how far the job location from the metropliton area.
-
-Six of them are categorical columns and two are numerical columns. There are no missing and duplicate values in the dataset. Following are the descriptions of the columns
 
 # Data preprocessing
-I examine the outliers of salary column. 25th quartile is 8.5k and 75th quartileis 220.5k. I removed the entries with salary below 8.5. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. From EDA, It is seen that, Highly paid industries are OIL and FINANCE and lowest paid is Education. Similarly, CEO is paid highest followed by CTO, CFO, Vice_president, Senior, Juior and Janitar. For degree, it is seen that salaries increases according to their level of education. However, Average salary for all majors is almost same. None degrees are paid less than average. salary Increase linearly with yearsExperiences wheras salary decreaes with increase milesFromMetroplis. 
-Categorical data is converted to numerical coloumns using one hot encoding.
+
+As a part of data cleaning I have impelemented following steps:
+Missing value handling: Luckily there is no missing values.
+Outliers: From the box plot, it is clear that salary below 8.5K is an outliers. So I removed this data point. Salaries above 75th quartile have reasonable ground to be legitimate data because most of them are C level position with higher degree. From EDA, It is seen that, Highly paid industries are OIL and FINANCE and lowest paid is Education. Similarly, CEO is paid highest followed by CTO, CFO, Vice_president, Senior, Juior and Janitar. For degree, it is seen that salaries increases according to their level of education. However, Average salary for all majors is almost same. None degrees are paid less than average. salary Increase linearly with yearsExperiences wheras salary decreaes with increase milesFromMetroplis. 
+
+# Exploratory Data Analysis
+Looking at the Box plot, average salary for higher educated people are higher compared to those who have low degree. Similary C-level positions are paid higher salary. However, average salary for all majors are pretty much same. For industry, Oil and finance are highly paid industry whereas eaducation is low paying industry. 
 
 # Baseline Model
 Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. Different ML models can be tested to reduce the MSE
