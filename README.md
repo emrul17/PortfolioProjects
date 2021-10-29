@@ -49,7 +49,7 @@ From numerical plot, It is found that, Salary Increase linearly with yearsExperi
 ![yearsExperience](https://user-images.githubusercontent.com/33338872/74958072-0c1fcb00-53ce-11ea-878f-579fce868813.jpg)
 ![milesFromMetropolis](https://user-images.githubusercontent.com/33338872/74958080-0e822500-53ce-11ea-99e5-86f562e747f7.jpg)
 
-# Modeling
+# Model
 Baseline model is built based on the average salary for industry column and mean squared error(MSE) is calculated 1634.6951926513882 which is very high. 
 Based on the exploraory data analysis i chose Four regression models(LinearRegression, RandomForestRegressor, GradientBoostingRegressor, XGBRegressor) and compared the scores. GradientBoosting gives the best result. MSE for gradientBoosting model is 377.45402752571204. This result is found for default parameters. By applying parameter tuning method we can find the best parameters. 
 
