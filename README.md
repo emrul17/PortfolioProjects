@@ -1,7 +1,7 @@
 # Salary Prediction Based on Job Description
 # Problem
 
-Offering an appropriate salary is aspect of job posting for employeers. Beause decent salary offer can bring the best talent to the team. It is always difficult to predict the right salary for a particular position. The goal of this project is to examine a set of job postings with salaries and predict the salary from new job posting.
+Offering an appropriate salary is an aspect of job posting for employeers. Beause decent salary offer can bring the best talent to the team. It is always difficult to predict the right salary for a particular position. The goal of this project is to examine a set of job postings with salaries and predict the salary from new job posting.
 
 # Data collection 
 Train dataset has total of 1000000 rows and 8 columns. Following are the deatails of data:
